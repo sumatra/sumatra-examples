@@ -1,0 +1,57 @@
+event paynet_deposit
+amount := $.amount as float
+clabe := $.clabe as string
+currency := $.currency as string
+description := $.description as string
+method := $.method as string
+operation_type := $.operation_type as string
+order_id := $.order_id as string
+payment_method_type := $.payment_method.type as string
+store_branch_id := $.store.branch_id as int
+store_company_name := $.store.company_name as string
+transaction_type := $.transaction_type as string
+xact_id := $.xact_id as string
+
+event spei_incoming
+amount := $.amount as float
+currency := $.currency as string
+prior_balance := $.beneficiary.prior_balance as float
+order_id := $.order_id as string
+acct_id := $.beneficiary.account.acct_id as string
+clabe := $.beneficiary.account.clabe as string
+email := $.beneficiary.account.email as string
+full_name := $.beneficiary.account.full_name as string
+acct_creation_date := $.beneficiary.creation_date as string
+sender_clabe := $.sender.account.clabe as string
+sender_full_name := $.sender.account.full_name as string
+sender_bank := $.sender.bank.company_name as string
+
+event spei_outgoing
+amount := $.amount as float
+currency := $.currency as string
+prior_balance := $.sender.prior_balance as float
+device_type := $.client.device_type as string
+ip := $.client.ip as string
+trusted_device_token := $.client.trusted_device_token as string
+order_id := $.order_id as string
+acct_id := $.sender.account.acct_id as string
+clabe := $.sender.account.clabe as string
+email := $.sender.account.email as string
+full_name := $.sender.account.full_name as string
+acct_creation_date := $.sender.creation_date as string
+beneficiary_clabe := $.beneficiary.account.clabe as string
+beneficiary_full_name := $.beneficiary.account.full_name as string
+beneficiary_bank := $.beneficiary.bank.company_name as string
+
+event login_attempt
+acct_id := $.acct_id as string
+device_type := $.client.device_type as string
+ip := $.client.ip as string
+success := $.success as bool
+
+event update_trusted_device
+acct_id := $.acct_id as string
+device_type := $.client.device_type as string
+ip := $.client.ip as string
+mobile := $.mobile as string
+otp_creation_date := $.otp_creation_date as time
