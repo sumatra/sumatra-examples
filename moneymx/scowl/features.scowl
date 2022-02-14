@@ -4,13 +4,8 @@ money_out_48h := Sum(amount by acct_id last 48 hours)
 past_pair_money_transferred := Sum(amount by clabe, beneficiary_clabe last 30 days) - Sum(amount by clabe, beneficiary_clabe last 48 hours)
 unique_senders_to_beneficiary := CountUnique(clabe by beneficiary_clabe)
 
--- ATO features
-failed_logins_by_ipc := Latest<login_attempt>(failed_accounts_by_ipc by acct_id where success=true)
-trusted_device_updates_shared_mobile_36h := Latest<update_trusted_device>(accounts_per_mobile by acct_id last 36 hours)
+max_failed_logins := Max<login_attempt>(failed_by_ip by acct_id where success=true last 14 days)
+days_since_device_update := Days(EventTime()-LatestTime<update_trusted_device>(by acct_id))
 
 event login_attempt
-ipc := IPCBlock(ip)
-failed_accounts_by_ipc := CountUnique(acct_id by ipc where success=false last hour)
-
-event update_trusted_device
-accounts_per_mobile := CountUnique(acct_id by mobile last 30 days)
+failed_by_ip := CountUnique(acct_id by ip where success=false last 48 hours)
