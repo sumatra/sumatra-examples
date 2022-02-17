@@ -4,9 +4,3 @@ money_out_48h := Sum(amount by acct_id last 48 hours)
 past_pair_money_transferred := Sum(amount by clabe, beneficiary_clabe last 30 days)
                                - Sum(amount by clabe, beneficiary_clabe last 48 hours)
 unique_senders_to_beneficiary := CountUnique(clabe by beneficiary_clabe)
-
-max_failed_logins := Max<login_attempt>(failed_by_ip by acct_id where success=true last 14 days)
-days_since_device_update := Days(EventTime() - LatestTime<update_trusted_device>(by acct_id))
-
-event login_attempt
-failed_by_ip := CountUnique(acct_id by ip where success=false last 15 minutes)
