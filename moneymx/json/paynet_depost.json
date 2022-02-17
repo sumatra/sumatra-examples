@@ -1,0 +1,21 @@
+{
+    "_type": "paynet_deposit",
+    "xact_id": "tx_be2b98e8958a",
+    "description": "Cargo con tienda",
+    "amount": 216.0,
+    "operation_type": "in",
+    "store": {
+        "company_name": "Dafiti",
+        "branch_id": "DB19"
+    },
+    "payment_method": {
+        "type": "store",
+        "reference": "rd5da1ced0ab644",
+        "barcode_url": "https://sandbox-api.openpay.mx/barcode/rd5da1ced0ab644?width=1&height=45"
+    },
+    "clabe": "134011322972040254",
+    "order_id": "oid-2364393198",
+    "transaction_type": "charge",
+    "currency": "MXN",
+    "method": "store"
+}

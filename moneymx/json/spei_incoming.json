@@ -1,0 +1,25 @@
+{
+    "_type": "spei_incoming",
+    "sender": {
+        "account": {
+            "clabe": "014845352951063594",
+            "full_name": "James Hardin"
+        },
+        "bank": {
+            "company_name": "Sistema de Transferencias y Pagos"
+        }
+    },
+    "beneficiary": {
+        "account": {
+            "clabe": "134011322972040254",
+            "acct_id": "4f1dd40e9bd9",
+            "email": "christine11@espinoza-rivera.com",
+            "full_name": "Christine Espinoza"
+        },
+        "prior_balance": 10000.0,
+        "creation_date": "2020-02-13 03:11:37"
+    },
+    "amount": 5000.0,
+    "currency": "MXN",
+    "order_id": "oid-23e84e5651"
+}

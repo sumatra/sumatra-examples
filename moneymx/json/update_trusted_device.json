@@ -1,0 +1,10 @@
+{
+    "_type": "update_trusted_device",
+    "acct_id": "4f1dd40e9bd9",
+    "mobile": "129-468-5522",
+    "client": {
+        "ip": "140.186.57.212",
+        "device_type": "iPhone; CPU iPhone OS 7_1_2 like Mac OS X"
+    },
+    "otp_creation_date": "2021-01-01T07:01:05.989000+00:00"
+}

@@ -1,0 +1,30 @@
+{
+    "_type": "spei_outgoing",
+    "client": {
+        "ip": "48.92.153.246",
+        "device_type": "iPhone; CPU iPhone OS 7_1_2 like Mac OS X",
+        "trusted_device_token": "tk_f491634c24be"
+    },
+    "sender": {
+        "account": {
+            "clabe": "134011322972040254",
+            "acct_id": "4f1dd40e9bd9",
+            "email": "christine11@espinoza-rivera.com",
+            "full_name": "Christine Espinoza"
+        },
+        "prior_balance": 1424.15,
+        "creation_date": "2019-07-11 19:19:34"
+    },
+    "beneficiary": {
+        "account": {
+            "clabe": "021071109934366651",
+            "full_name": "Michelle Pearson"
+        },
+        "bank": {
+            "company_name": "HSBC Mexico"
+        }
+    },
+    "amount": 152.29,
+    "currency": "MXN",
+    "order_id": "oid-81e5f809aa"
+}
